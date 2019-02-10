@@ -6,7 +6,7 @@
 #    By: wta <marvin@42.fr>                         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 02:51:44 by wta               #+#    #+#              #
-#    Updated: 2018/12/05 06:43:30 by wta              ###   ########.fr        #
+#    Updated: 2018/12/09 07:42:47 by wta              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 # ====================================================================== COLOR #
@@ -21,7 +21,7 @@ LIBFT		=	-L libft -lft
 MLXLIB		=	-L /usr/local/lib -lmlx
 MLXFLAG		=	-framework OpenGL -framework Appkit
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -Ofast
 SRCS		=	main.c				\
 				fractal.c			\
 				fractal_bailout.c	\

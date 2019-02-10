@@ -6,7 +6,7 @@
 /*   By: wta <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 06:09:46 by wta               #+#    #+#             */
-/*   Updated: 2018/12/04 06:09:55 by wta              ###   ########.fr       */
+/*   Updated: 2019/02/10 22:03:08 by wta              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		init_mlx(t_mlx *mlx)
 		return (0);
 	if (!(mlx->img_ptr = mlx_new_image(mlx->mlx_ptr, SCREEN_W, SCREEN_H)))
 		return (0);
-	if (!(mlx->img_str = mlx_get_data_addr(mlx->img_ptr, &mlx->bpp
+	if (!(mlx->img_str = (int*)mlx_get_data_addr(mlx->img_ptr, &mlx->bpp
 					, &mlx->sizel, &mlx->endian)))
 		return (0);
 	init_spec(mlx);

@@ -6,7 +6,7 @@
 /*   By: wta <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 23:20:37 by wta               #+#    #+#             */
-/*   Updated: 2018/12/02 11:41:51 by wta              ###   ########.fr       */
+/*   Updated: 2019/02/10 22:03:44 by wta              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,9 @@ void	color_img(t_mlx *mlx, int x, int y)
 	if (x >= 0 && x < SCREEN_W && y >= 0 && y < SCREEN_H)
 	{
 		if (iter < mlx->maxiter)
-			*((unsigned int*)(mlx->img_str + x * mlx->bpp / 8 + y
-						* mlx->sizel)) = get_color(iter, mlx->ncolor);
+			mlx->img_str[x + y * SCREEN_W] = get_color(iter, mlx->ncolor);
 		else
-			*((unsigned int*)(mlx->img_str + x * mlx->bpp / 8 + y
-						* mlx->sizel)) = 0;
+			mlx->img_str[x + y * SCREEN_W] = 0;
 	}
 }
 

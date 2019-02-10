@@ -6,7 +6,7 @@
 /*   By: wta <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 23:03:29 by wta               #+#    #+#             */
-/*   Updated: 2018/12/03 17:42:37 by wta              ###   ########.fr       */
+/*   Updated: 2019/02/10 22:03:27 by wta              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 # include "libft/includes/libft.h"
 # include "libft/includes/ft_printf.h"
 
-# define SCREEN_W	512
-# define SCREEN_H	512
-# define MAX_THREAD 4
+# define SCREEN_W	800
+# define SCREEN_H	800
+# define MAX_THREAD 16
 # define MANDELBROT 0x1
 # define JULIA		0x2
 # define TRICORN	0x4
@@ -62,7 +62,7 @@ typedef struct	s_mlx
 	void		*mlx_ptr;
 	void		*win_ptr;
 	void		*img_ptr;
-	char		*img_str;
+	int			*img_str;
 	int			bpp;
 	int			sizel;
 	int			endian;
